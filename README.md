@@ -26,7 +26,6 @@ docker-compose up
 Finalmente, se realizaron algunas pruebas unitarias, para esto se utilizaron mocha, chai, chai-as-promised, los casos evaluados son los siguientes:
 - Validación al obtener empleado
 - Validación al crear empleado
-- Validación al actualizar empleado
 
 Para correr los test ejecuta el siguiente comando
 
