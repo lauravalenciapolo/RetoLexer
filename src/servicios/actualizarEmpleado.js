@@ -1,4 +1,5 @@
 const { Empleado } = require("../db.js");
+const empleadoRepositorio = require ("../repositorios/empleadosRepositorio")
 
 const actualizarEmpleado = async (
   codigo,
@@ -8,23 +9,16 @@ const actualizarEmpleado = async (
   apellido2,
   codigo_departamento
 ) => {
-  const encontrarEmpleado = await Empleado.findOne({
-    where: {
-      codigo,
-    },
-  });
-  if (!encontrarEmpleado) throw new Error("Verifique el código del empleado");
-  if (encontrarEmpleado) {
-    encontrarEmpleado.update({
-      nif,
-      nombre,
-      apellido1,
-      apellido2,
-      codigo_departamento,
-    });
-    await encontrarEmpleado.save();
-    return encontrarEmpleado;
-  }
-};
+  const actualizarEmpleado = await empleadoRepositorio.actualizarEmpleado(
+    codigo,
+    nif,
+    nombre,
+    apellido1,
+    apellido2,
+    codigo_departamento
+  );
+    return actualizarEmpleado;
+  };
+
 
 module.exports = actualizarEmpleado;
