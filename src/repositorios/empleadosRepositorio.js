@@ -67,7 +67,14 @@ const actualizarEmpleado = async (
       codigo_departamento,
     });
     await encontrarEmpleado.save();
-    return encontrarEmpleado;
+    const empleadoInfo = encontrarEmpleado.dataValues
+    return {apellido1: empleadoInfo.apellido1,
+      apellido2: empleadoInfo.apellido2,
+      codigo: empleadoInfo.codigo,
+      codigo_departamento: empleadoInfo.codigo_departamento,
+      nif: empleadoInfo.nif,
+      nombre: empleadoInfo.nombre
+    }
   }
 };
 

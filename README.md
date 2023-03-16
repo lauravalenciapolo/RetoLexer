@@ -15,7 +15,7 @@ El proyecto se realizó teniendo en cuenta la arquitectura de capas:
 Se inicializaron datos tanto para los departamentos como para empleados, esto con el fin de que se puedan ejecutar los endpoints sin requerir la creación de estos valores con anterioridad. 
 
 ## Docker - Docker compose
-Se implementó el montaje por medio de docker - docker compose. Para ejecutar escribe en la terminal el siguiente comando:
+Se implementó el montaje por medio de docker - docker compose, este ultimo permite ejecutar varios contenedores, en este caso, se creo un contenedor para la base de datos y otro para el servidor. Para ejecutar escribe en la terminal el siguiente comando:
 
 ```
 docker-compose up
@@ -33,7 +33,7 @@ Para correr los test ejecuta el siguiente comando
 npm run test 
 ```
 
-__Importante__: En la raiz del proyecto se debe crear un archivo llamado: `.env`, en el cual se deben ingresar los siguientes datos para permitir la conexion con la base de datos:
+__Importante__: Si quieres ejecutar el proyecto en local, en la raiz del proyecto se debe crear un archivo llamado: `.env`, en el cual se deben ingresar los siguientes datos para permitir la conexion con la base de datos:
 
 DB_USER= usuariodepostgres
 DB_PASSWORD=passwordDePostgres
@@ -57,7 +57,7 @@ npm start
 ó
 docker-compose up
 ``` 
-
+Tener en cuenta que el comando npm start lo ejecutará en el local, mientras que docker-compose up lo ejecuta con docker.
 Puede empezar a realizar peticiones.
 
 ### Endpoints
