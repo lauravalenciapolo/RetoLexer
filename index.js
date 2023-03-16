@@ -1,7 +1,7 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const empleadosBD = require('./src/empleadosBD/index.js')
-const departamentosBD = require('./src/departamentosBD/index')
+const empleadosBD = require('./src/datosInicialesBD/empleadosBD/index')
+const departamentosBD = require('./src/datosInicialesBD/departamentosBD/index')
 
 conn.sync({ force: true }).then(() => {
 

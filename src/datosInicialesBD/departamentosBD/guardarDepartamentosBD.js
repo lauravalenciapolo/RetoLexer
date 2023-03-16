@@ -1,4 +1,4 @@
-const { Departamento } = require('../db.js');
+const { Departamento } = require('../../db.js');
 
 async function guardarDepartamentosBD(departamento){
 

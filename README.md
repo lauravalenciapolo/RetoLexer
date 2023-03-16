@@ -5,15 +5,33 @@
 
 Elaborar un micro servicio para la tabla “empleado” el cual sea capaz de insertar, actualizar, borrar y consultar (CRUD) información utilizando el entorno de Node.js.
 
+## Arquitectura 
 El proyecto se realizó teniendo en cuenta la arquitectura de capas:
 - Primera capa (Rutas): Recibe la información referente a las peticiones
 - Segunda capa (Servicios): Se realiza la lógica de negocio y sus validaciones, las cuales son utilizadas en las rutas (primera capa)
 - Tercera capa (Repositorios): Se establece la conexión con la base de datos, esta información es requerida por los servicios.
 
-Se inicializaron datos tanto para los departamentos como para empleados, esto con el fin de que se puedan ejecutar los endpoints sin requerir la creación de estos valores con anterioridad.  
-Adicionalmente, se implementó el montaje por medio de docker ....
-Y se realizaron algunas pruebas unitarias ...
+## Inicialización de Datos 
+Se inicializaron datos tanto para los departamentos como para empleados, esto con el fin de que se puedan ejecutar los endpoints sin requerir la creación de estos valores con anterioridad. 
 
+## Docker - Docker compose
+Se implementó el montaje por medio de docker - docker compose. Para ejecutar escribe en la terminal el siguiente comando:
+
+```
+docker-compose up
+```
+
+## Testing
+
+Finalmente, se realizaron algunas pruebas unitarias, para esto se utilizaron mocha, chai, chai-as-promised, los casos evaluados son los siguientes:
+- Validación al obtener empleado
+- Validación al crear empleado
+
+Para correr los test ejecuta el siguiente comando
+
+```
+npm run test 
+```
 
 __Importante__: En la raiz del proyecto se debe crear un archivo llamado: `.env`, en el cual se deben ingresar los siguientes datos para permitir la conexion con la base de datos:
 
@@ -26,7 +44,21 @@ Los valores `usuariodepostgres` y `passwordDePostgres` se deben reemplazar con s
 
 ## Comenzar
 
-Descarga el archivo, ya sea desde github o directamente del correo y abre el proyecto. Después de crear el archivo .env, en la raiz del proyecto abre la terminal y ejecuta el comando npm install, una vez tengas instalado todas las dependencias, puede ejecutar el comando npm start y empezar a realizar peticiones.
+Forkea desde github el repositorio y abre el proyecto. Después de crear el archivo .env, en la raiz del proyecto abre la terminal y ejecuta el comando:
+
+```
+npm install
+```
+
+Una vez tenga instalado todas las dependencias, ejecutar cualquiera de los siguientes comandos 
+
+```
+npm start 
+ó
+docker-compose up
+``` 
+
+Puede empezar a realizar peticiones.
 
 ### Endpoints
 
@@ -42,8 +74,4 @@ Para ejecutar las solicitudes, es necesario contar con una herramienta como post
  
 Cualquier duda no dudes en contactarme.
 
-## Testing
 
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos

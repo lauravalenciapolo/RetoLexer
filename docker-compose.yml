@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '1234:1234'
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: 12345678
+      DB_DATABASE: lexer
+    depends_on:
+      - db
+    command: npm run start
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: lexer
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
