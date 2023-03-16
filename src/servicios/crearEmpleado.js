@@ -1,5 +1,5 @@
 const {Empleado, Departamento} = require ("../db")
-const empleadoRepositorio = require ("../repositories/empleados-repository")
+const empleadoRepositorio = require ("../repositorios/empleadosRepositorio")
 
 const crearEmpleado = async (nif, nombre, apellido1, apellido2, codigo_departamento) =>{
     if (!nif || !nombre || !apellido1 || !codigo_departamento)

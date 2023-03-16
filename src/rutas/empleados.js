@@ -1,8 +1,8 @@
-const obtenerEmpleado = require('../controllers/obtenerEmpleado');
-const crearEmpleado = require('../controllers/crearEmpleado');
-const eliminarEmpleado = require('../controllers/eliminarEmpleado');
-const actualizarEmpleado = require('../controllers/actualizarEmpleado')
-const obtenerEmpleados = require('../controllers/obtenerEmpleados')
+const obtenerEmpleado = require('../servicios/obtenerEmpleado');
+const crearEmpleado = require('../servicios/crearEmpleado');
+const eliminarEmpleado = require('../servicios/eliminarEmpleado');
+const actualizarEmpleado = require('../servicios/actualizarEmpleado')
+const obtenerEmpleados = require('../servicios/obtenerEmpleados')
 
 
 const router = require('express').Router();

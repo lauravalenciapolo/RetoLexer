@@ -1,5 +1,5 @@
 const { Empleado } = require("../db.js");
-const empleadoRepositorio = require("../repositories/empleados-repository");
+const empleadoRepositorio = require("../repositorios/empleadosRepositorio");
 
 const eliminarEmpleado = async (codigo) => {
   if (codigo) {
